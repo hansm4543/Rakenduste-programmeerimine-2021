@@ -1,0 +1,40 @@
+form{
+    text-align: center;
+     
+}
+h1{
+    font-size: 70px;
+
+}
+label {
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 25px;
+}
+input{
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    border-radius: 12px;
+    background-color: lightsteelblue;
+}
+.TooteSisestus{
+    font-size: 30px;
+    background-color: #555555;
+    padding: 14px 40px;
+    border-radius: 12px;
+    margin-top: 10px;
+    color: white;
+}
+.TooteSisestus:hover {
+    cursor: pointer;
+    background-color: lightslategray; /* Green */
+    color: white;
+    font-size: 40px;
+}
+body {
+    background-image: url('../pictures/background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
