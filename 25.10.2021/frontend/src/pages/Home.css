@@ -1,0 +1,47 @@
+h1{
+    font-size: 70px;
+
+}
+label {
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 25px;
+}
+input{
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+button{
+    font-size: 30px;
+    background-color: #555555;
+    padding: 14px 40px;
+    border-radius: 12px;
+    margin-top: 10px;
+    color: white;
+    margin-bottom: 40px;
+    margin-top: 50px;
+}
+button:hover {
+    cursor: pointer;
+    background-color: lightslategray; /* Green */
+    color: white;
+    font-size: 40px;
+}
+body{
+    text-align: center;
+}
+.itemName{
+    font-style: italic;
+    font-size: 70px;
+}
+.itemPrice{
+    font-size: 50px;
+    color: darkgreen;
+    margin-bottom: 7px;
+}
+.itemCategory{
+    font-size: 30px;
+    margin-bottom: 40px;
+    font-style: oblique;
+}
