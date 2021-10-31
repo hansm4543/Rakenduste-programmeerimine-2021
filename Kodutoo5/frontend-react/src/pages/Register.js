@@ -3,7 +3,7 @@ import './Register.css';
 
 function Register(){
     function itemSubmitHandler(number){
-        if(number == 1){
+        if(number === 1){
             document.getElementById("numbrike").innerHTML = "Õnnestus";
         }else{
             document.getElementById("numbrike").innerHTML = "Failed";

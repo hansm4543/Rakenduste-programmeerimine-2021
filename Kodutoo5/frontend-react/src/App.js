@@ -11,7 +11,7 @@ import Register from "./pages/Register";
 import AddPost from "./pages/AddPost";
 import LogIn from "./pages/LogIn";
 
-const { Header, Footer, Sider, Content } = Layout;
+const { Header, Footer, Content } = Layout;
 
 
 function App() {
@@ -26,7 +26,6 @@ function App() {
     <Content>
       <Switch>
         <Route exact path="/" component={HomePage}/>
-        <Route exact path="/oldposts" component={oldPosts}/>
         <Route exact path="/posts" component={Posts}/>
         <Route exact path="/register" component={Register}/>
         <Route exact path="/addpost" component={AddPost}/>

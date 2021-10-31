@@ -6,6 +6,7 @@ require("dotenv").config()
 
 const itemRoutes = require('./routes/item');
 const authRoutes = require('./routes/auth');
+const postRoutes = require('./routes/post');
 
 const app = express()
 app.use(express.json());
@@ -31,6 +32,7 @@ app.use(function (req, res, next) {
 
 app.use('/api/item', itemRoutes);
 app.use('/api/auth', authRoutes);
+app.use('/api/post', postRoutes);
 
 app.get('/', (req, res) => {
   res.send('Hello World!')

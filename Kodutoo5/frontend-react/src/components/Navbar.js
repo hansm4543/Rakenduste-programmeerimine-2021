@@ -26,9 +26,6 @@ function Navbar (){
             <Link to="/posts">
                 <Button type="primary">Postitustesse</Button>
             </Link>
-            <Link to="/oldposts">
-                <Button type="primary">Vana Posts</Button>
-            </Link>
 
             </div>
         </div>

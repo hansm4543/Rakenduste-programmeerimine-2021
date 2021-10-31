@@ -1,55 +1,11 @@
 import 'antd/dist/antd.css';
-import './Posts.css';
-
 import React, { useEffect, useState } from 'react';
-//import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom';
 import { Table, Input, InputNumber, Popconfirm, Form, Typography } from 'antd';
 const originData = [];
 
 function Posts(){
 
-    function itemEditHandler(JSONObjekt, ID){
-        //N2en consolest millist rida ja mis ta iD on muudeti
-        console.log(JSONObjekt);
-        console.log(ID);
-        const start = Date.now();
-        console.log(start);
-
-
-        //datenow-ga uuendan aega millal postitust viimati n2piti ning taaslaen kogu lehe, et ka kuup2ev tabelis uueneks
-        const itemSubmitted={
-            id: ID,
-            title: JSONObjekt.title,
-            text: JSONObjekt.text,
-            firstName: JSONObjekt.firstName,
-            lastName: JSONObjekt.lastName,
-            createdAt: start,
-            __v: 0,
-        }
-        //console.log(itemSubmitted);
-        fetch('http://localhost:8081/api/post/update/' + ID.toString(), {
-            method: 'PUT',
-            body: JSON.stringify(itemSubmitted),
-            headers: {
-                'Content-Type':'application/json'
-            }
-        });
-        window.location.reload();
-    }
-    
-    function itemDeleteHandler(JSONObjekt, ID){
-        //N2en consolest millist rida ja mis ta iD on muudeti
-        console.log(JSONObjekt);
-        console.log(ID);
-
-        fetch('http://localhost:8081/api/post/delete/' + ID.toString(), {
-            method: 'DELETE'/*,
-            headers: {
-                'Content-Type':'application/json'
-            }*/
-        });
-        window.location.reload();
-    }
 
     //state on hook  isloading on muutuja ja setisloading on funktsioon millega muutuja v22rust muudame
     const [isLoading, setIsLoading] = useState(true);
@@ -61,27 +17,15 @@ function Posts(){
         fetch('http://localhost:8081/api/post/').then(res => {
             return res.json();
         }).then( data => {
-            //console.log(data);
+            console.log(data);
             setIsLoading(false);
-
-            for (let i = 0; i < data.length; i++) {
-                originData.push({
-                  key: data[i]._id,
-                  title: data[i].title,
-                  text: data[i].text,
-                  firstName: data[i].firstName,
-                  lastName: data[i].lastName,
-                  createdAt: data[i].createdAt,
-                });
-            }
-            //console.log(originData);
 
             setIsLoadedItems(data);
         });
     
     },[])
 
-    if(isLoading === true){
+    if(isLoading == true){
         return(
         <div>
             Laeb...
@@ -126,7 +70,7 @@ function Posts(){
     
     const EditableTable = () => {
     const [form] = Form.useForm();
-    const [data, setData] = useState(originData);
+    const [data, setData] = useState(loadedItems);
     const [editingKey, setEditingKey] = useState('');
     
     const isEditing = (record) => record.key === editingKey;
@@ -158,36 +102,14 @@ function Posts(){
             newData.splice(index, 1, { ...item, ...row });
             setData(newData);
             setEditingKey('');
-
-            itemEditHandler(row, key);
-
         } else {
             newData.push(row);
             setData(newData);
             setEditingKey('');
-
-            itemEditHandler(row, key);
-            //N2en consolest millist rida ja mis ta iD on muudeti
-            console.log(row);
-            console.log(key);
-
         }
         } catch (errInfo) {
         console.log('Validate Failed:', errInfo);
         }
-    }
-        const deleteline = (record) => {
-            deletekey(record.key);
-        };
-        const deletekey = async (key) => {
-            try {
-            const row = await form.validateFields();
-    
-            itemDeleteHandler(row, key);
-    
-            } catch (errInfo) {
-            console.log('Validate Failed:', errInfo);
-            }
     };
     
     const columns = [
@@ -219,7 +141,7 @@ function Posts(){
         title: 'Date',
         dataIndex: 'createdAt',
         width: '15%',
-        editable: false,
+        editable: true,
         },
         {
         title: 'operation',
@@ -241,14 +163,10 @@ function Posts(){
                 <a>Cancel</a>
                 </Popconfirm>
             </span>
-            ) : (<div>
+            ) : (
             <Typography.Link disabled={editingKey !== ''} onClick={() => edit(record)}>
                 Edit
             </Typography.Link>
-            <Typography.Link disabled={editingKey !== ''} onClick={() => deleteline(record)}>
-                Kustuta
-            </Typography.Link>
-            </div>
             );
         },
         },
