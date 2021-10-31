@@ -1,0 +1,8 @@
+footer.ant-layout-footer{
+    height: 7%;
+    background: lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
