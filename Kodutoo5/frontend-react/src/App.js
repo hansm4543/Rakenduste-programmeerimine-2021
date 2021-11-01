@@ -30,6 +30,8 @@ function App() {
         <Route exact path="/register" component={Register}/>
         <Route exact path="/addpost" component={AddPost}/>
         <Route exact path="/login" component={LogIn}/>
+        <Route exact path="/oldposts" component={oldPosts}/>
+
       </Switch>
       </Content>
 

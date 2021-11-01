@@ -9,7 +9,8 @@ const initalPosts = {
 
 const initalAuth = {
     token: null,
-    user: null
+    firstName: null,
+    lastName: null,
 }
 
 const [combinedReducer, initialState] = combineReducers({

@@ -4,9 +4,21 @@ import './Posts.css';
 import React, { useEffect, useState } from 'react';
 //import ReactDOM from 'react-dom';
 import { Table, Input, InputNumber, Popconfirm, Form, Typography } from 'antd';
+
+
+import {useContext, useRef} from 'react';
+import {Context} from "../store";
+import { logoutUser } from "../store/actions";
+
 const originData = [];
+let i = 0;
+
+
 
 function Posts(){
+
+    const [state, dispatch] = useContext(Context)
+    console.log(state);
 
     function itemEditHandler(JSONObjekt, ID){
         //N2en consolest millist rida ja mis ta iD on muudeti
@@ -64,7 +76,7 @@ function Posts(){
             //console.log(data);
             setIsLoading(false);
 
-            for (let i = 0; i < data.length; i++) {
+            for (i; i < data.length; i++) {
                 originData.push({
                   key: data[i]._id,
                   title: data[i].title,

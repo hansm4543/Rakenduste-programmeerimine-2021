@@ -1,7 +1,17 @@
 import AddPostForm from "../components/AddPostForm";
 import './Register.css';
 
+
+import {useContext, useRef, useState, useEffect} from 'react';
+import {Context} from "../store";
+import { logoutUser, loginUser } from "../store/actions";
+
+
+
 function AddPost(){
+    const [state, dispatch] = useContext(Context)
+    console.log(state);
+    
     function itemSubmitHandler(number){
         if(number === 1){
             document.getElementById("numbrike").innerHTML = "Õnnestus";

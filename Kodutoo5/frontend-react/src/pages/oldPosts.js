@@ -30,6 +30,7 @@ function Posts(){
             }
         ]))
         console.log("is it true?");
+        console.log(state);
     }, [])
     //voite panna eraldi nupu, et get latest from database (sync)
 
@@ -49,6 +50,8 @@ function Posts(){
             title: title
         }
         dispatch(addPost(newPost))
+        console.log(state);
+
     };
 
     //console.log({inputRef})
