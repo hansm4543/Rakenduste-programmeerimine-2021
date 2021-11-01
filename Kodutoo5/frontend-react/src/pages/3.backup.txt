@@ -14,6 +14,8 @@ import {updatePosts } from "../store/actions"
 const originData = [];
 let i = 0;
 
+const delay = ms => new Promise(res => setTimeout(res, ms));
+
 
 function Posts(){
 
@@ -45,7 +47,29 @@ function Posts(){
                 'Content-Type':'application/json'
             }
         });
-        window.location.reload(false);
+
+        fetch('http://localhost:8081/api/post/').then(res => {
+            return res.json();
+        }).then( data => {
+            //console.log(data);
+            const mingiconteiner = [];
+            for (let m = 0; m < data.length; m++) {
+                mingiconteiner.push({
+                    key: data[m]._id,
+                    title: data[m].title,
+                    text: data[m].text,
+                    firstName: data[m].firstName,
+                    lastName: data[m].lastName,
+                    createdAt: data[m].createdAt,
+                });
+            }
+            //console.log(mingiconteiner);
+            setData(mingiconteiner);
+            console.log(state);
+            //setIsLoading(true);
+            
+
+        });
     }
     
     function itemDeleteHandler(JSONObjekt, ID, {setData}){
@@ -59,7 +83,30 @@ function Posts(){
                 'Content-Type':'application/json'
             }*/
         });
-        window.location.reload();
+        //window.location.reload();
+        delay(5000);
+        fetch('http://localhost:8081/api/post/').then(res => {
+            return res.json();
+        }).then( data => {
+            //console.log(data);
+            const mingiconteiner = [];
+            for (let m = 0; m < data.length; m++) {
+                mingiconteiner.push({
+                    key: data[m]._id,
+                    title: data[m].title,
+                    text: data[m].text,
+                    firstName: data[m].firstName,
+                    lastName: data[m].lastName,
+                    createdAt: data[m].createdAt,
+                });
+            }
+            console.log(mingiconteiner);
+            setData(mingiconteiner);
+            console.log(state);
+            //setIsLoading(true);
+            
+
+        });
     }
 
     //state on hook  isloading on muutuja ja setisloading on funktsioon millega muutuja v22rust muudame

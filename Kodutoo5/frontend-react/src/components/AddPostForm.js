@@ -101,7 +101,7 @@ function AddPostForm(props){
             }}
         >
             <Button type="primary" htmlType="submit">
-            Registreeri
+            Sisesta
             </Button>
         </Form.Item>
         </Form>
