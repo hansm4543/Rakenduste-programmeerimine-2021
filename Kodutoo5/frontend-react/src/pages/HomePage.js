@@ -4,9 +4,14 @@ import 'antd/dist/antd.css';
 import { Button } from 'antd';
 import './koduleht.css';
 
+import {useContext} from 'react';
+import {Context} from "../store";
 
 function HomePage(){
 
+    const [state, dispatch] = useContext(Context)
+    console.log(state);
+    //teen navbari funktsiiooni, et kui klikitakse logo peale siis logib v2lja
 
     return(
         <div>

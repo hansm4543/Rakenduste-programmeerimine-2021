@@ -4,19 +4,25 @@ function AddUserForm(props){
     const [form] = Form.useForm();
     const onFinish = (values) => {
         console.log('Success:', values);
-        try{
-            fetch('http://localhost:8081/api/auth/signup', {
-                method: 'POST',
-                body: JSON.stringify(values),
-                headers: {'Content-Type':'application/json'}
-            });
+        if(values.password === values.passwordconfirm){
+            try{
+                fetch('http://localhost:8081/api/auth/signup', {
+                    method: 'POST',
+                    body: JSON.stringify(values),
+                    headers: {'Content-Type':'application/json'}
+                });
 
-            
-        }catch (error) {
-            console.error(error);
+                
+            }catch (error) {
+                console.error(error);
+            }
+            form.resetFields();
+            props.onAddUser(1);
+        }else{
+            document.getElementById("paroolconfirm").innerHTML = "Please Match the passwords!";
+            form.resetFields();
+            props.onAddUser(0)
         }
-        form.resetFields();
-        props.onAddUser(1);
     };
     
     const onFinishFailed = (errorInfo) => {
@@ -93,6 +99,21 @@ function AddUserForm(props){
         >
             <Input.Password />
         </Form.Item>
+        <Form.Item
+            label="Password Confirmation"
+            name="passwordconfirm"
+            rules={[
+            {
+                required: true,
+                message: 'Make sure it matches with your first input!',
+            },
+            ]}
+        >
+            <Input.Password />
+        </Form.Item>
+        <label id="paroolconfirm"></label>
+        <br></br>
+        <br></br>
 
         <Form.Item
             wrapperCol={{

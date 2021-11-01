@@ -2,9 +2,8 @@ import AddPostForm from "../components/AddPostForm";
 import './Register.css';
 
 
-import {useContext, useRef, useState, useEffect} from 'react';
+import {useContext} from 'react';
 import {Context} from "../store";
-import { logoutUser, loginUser } from "../store/actions";
 
 
 

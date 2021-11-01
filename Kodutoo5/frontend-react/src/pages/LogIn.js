@@ -9,9 +9,9 @@ import { useHistory } from "react-router-dom";
 
 
 
-import {useContext, useRef, useState, useEffect} from 'react';
+import {useContext} from 'react';
 import {Context} from "../store";
-import { logoutUser, loginUser } from "../store/actions";
+import { loginUser } from "../store/actions";
 
 function LogIn(){
 
