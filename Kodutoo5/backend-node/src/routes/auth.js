@@ -9,6 +9,7 @@ router.post(
     check("email")
       .isEmail()
       .normalizeEmail()
+      .escape()
       .withMessage("Must be correctly formatted e-mail"),
     check("password")
       .isLength({ min: 6 })

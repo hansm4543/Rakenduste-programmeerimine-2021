@@ -39,9 +39,6 @@ function Navbar (){
             <Link to="/posts">
                 <Button type="primary">Postitustesse</Button>
             </Link>
-            <Link to="/oldPosts">
-                <Button type="primary">Postitustesse</Button>
-            </Link>
             </div>
         </div>
     );
