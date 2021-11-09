@@ -1,6 +1,5 @@
 # Projekt name: Gif-land
 ### Autorid: Hans-Märten Liiu ja Jan-Erik Läänesaar
-<br/>
 </br>
 
 Algne Idee:
