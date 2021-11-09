@@ -4,7 +4,6 @@
 
 Algne Idee:
 -------------
-</br>
 
 Lehel eksisteerib sisse-, ja välja logimise võimalus. Kasutajad saavad üles laadida enda poolt valitud .gif failisid. Teised kasutajad saavad üksteise gif-isid meeldivaks märkida ning saavad neile omalt poolt kommentaare lisada. 
 <br />
