@@ -7,6 +7,7 @@ Algne Idee:
 
 Lehel eksisteerib sisse-, ja välja logimise võimalus. Kasutajad saavad üles laadida enda poolt valitud .gif failisid. Teised kasutajad saavad üksteise gif-isid meeldivaks märkida ning saavad neile omalt poolt kommentaare lisada. 
 <br />
+<br />
 Kui arendus nende põhifunktsionaalsustega ilusti lõpuni jõuab, oleks järgmine eesmärk luua profiilide süsteem, kus saaks näha mõne konkreetse kasutaja poolt kõiki üleslaetud gif-e, ning kus saaks ka antud kasutajat jälgima hakata. Esialgses versioonis kuvame kõikide kasutajate poolt tehtud postitused ühisel lehel, küll aga oleks lõppeesmärk kuvada iga kasutaja jaoks eraldi voolehte, kus ta näeks vaid tema enda poolt jälgitud kasutajate postitusi. 
 </br>
 
