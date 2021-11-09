@@ -1,11 +1,13 @@
-# Projekt name: Gif-land
+# Project Name: Gif-land
 ### Autorid: Hans-Märten Liiu ja Jan-Erik Läänesaar
 </br>
 
 Algne Idee:
 -------------
 </br>
-Saab lehele sisse/välja logida. Saab üles laadida Gif-e. Kasutajad saavad Gif-e likeda ja kommenteerida.Hiljem kui projektiga ilusti joonele saab, siis võiks luua ka profiilide süsteemi, kus saab profiililt kasutaja poolt üles laetud gif-e näha ning ka followida userit. Algselt kuvame kõik postitused news feedile aga kui followimine valmis saab siis võiks saada näha ainult enda followitud userite postitusi.
+Lehel eksisteerib sisse-, ja välja logimise võimalus. Kasutajad saavad üles laadida enda poolt valitud .gif failisid. Teised kasutajad saavad üksteise gif-isid meeldivaks märkida ning saavad neile omalt poolt kommentaare lisada. 
+<br />
+Kui arendus nende põhifunktsionaalsustega ilusti lõpuni jõuab, oleks järgmine eesmärk luua profiilide süsteem, kus saaks näha mõne konkreetse kasutaja poolt kõiki üleslaetud gif-e, ning kus saaks ka antud kasutajat jälgima hakata. Esialgses versioonis kuvame kõikide kasutajate poolt tehtud postitused ühisel lehel, küll aga oleks lõppeesmärk kuvada iga kasutaja jaoks eraldi voolehte, kus ta näeks vaid tema enda poolt jälgitud kasutajate postitusi. 
 </br>
 
 ## Rakenduse funktsionaalne kirjeldus:
@@ -14,11 +16,13 @@ Tuleb jooksvalt!
 </br>
 
 ## Wireframe kuvatõmmised
-![Source code](wireframes/dfsadfkljdasfjksdafjasdfjk.png)
+![Source code](wireframes/register.jpg)
+![Source code](wireframes/login.jpg)
+![Source code](wireframes/feed.jpg)
+![Source code](wireframes/profile.jpg)
+![Source code](wireframes/comments.jpg)
 </br>
 
 ## Rakenduse kuvatõmmised
 
 Tulevad jooksvalt!
-
-
