@@ -2,8 +2,6 @@
 ### Autorid: Hans-Märten Liiu ja Jan-Erik Läänesaar
 <br/>
 <br/>
-</br>
-
 Algne Idee:
 -------------
 </br>
